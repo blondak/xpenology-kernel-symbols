@@ -16,9 +16,6 @@ static int syno_libata_index_get (struct Scsi_Host *host, uint channel, uint id,
 }
 EXPORT_SYMBOL(syno_libata_index_get);
 
-typedef int (*custom_print)(const char *fmt, ...);
-custom_print my_print;
-
 static int lookup_kernel_symbols(void *data, const char *namebuf, struct module *module, unsigned long address)
 {
 	if ((module == NULL) && (strcmp(namebuf, "syno_libata_index_get") == 0)){
